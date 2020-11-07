@@ -1,6 +1,6 @@
 # attribmanager
 
-##### A simple pythonic module to lock and hide class attributes
+##### A simple pythonic module to lock (make read-only) and hide class attributes
 
 
 ## Installation
