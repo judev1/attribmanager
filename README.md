@@ -18,6 +18,7 @@ class example(attribmanger.manage):
 
 		self.mylist = ["item 1", "item2"]
 		self.lock("mylist")
+
 		# mylist is read only and cannot be edited now, changing it
 		# will raise an error
 		
@@ -28,4 +29,7 @@ class example(attribmanger.manage):
 		self.unhide("myvar")
 		# Hiding an object without being able to unhide it would be
 		# the same as deleting it, that's why you can unhide it
+```
+
+		# mylist is read only and cannot be edited now
 ```
