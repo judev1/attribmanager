@@ -30,6 +30,3 @@ class example(attribmanger.manage):
 		# Hiding an object without being able to unhide it would be
 		# the same as deleting it, that's why you can unhide it
 ```
-
-		# mylist is read only and cannot be edited now
-```
