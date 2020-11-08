@@ -1,15 +1,18 @@
 from setuptools import setup
 
+with open("README.md", "r") as file: description = file.read()
+    
 setup(
     name="attribmanager",
-    version="0.1.0",    
-    description="A simple pythonic module to lock and hide class attributes",
+    version="1.0",    
+    description="A simple pythonic module to lock (make read-only) and hide class attributes",
+    long_description=description,
+    long_description_content_type="text/markdown",
     url="https://github.com/judev1/attribmanager",
     author="Jude BC",
     author_email="jude.version1.0@gmail.com",
     license="BSD 2-clause",
     packages=["attribmanager"],
-    install_requires=[],
 
     classifiers=[
         "Development Status :: 5 - Production/Stable",

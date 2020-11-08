@@ -1,12 +1,13 @@
-""" A simple pythonic module which can be used as an inheritable
-    class to lock, hide, and unhide attributes from the class
-"""
+"""A simple pythonic module which can be used as an inheritable
+class to lock, hide, and unhide attributes from the class """
 
-__version__ = "0.1.0"
+__version__ = "1.0"
 __author__ = "Jude BC"
+__github__ = "https://github.com/judev1/attribmanager"
+__license__ = "GNU General Public License v3.0"
 
 class manage:
-    """ A simple inheritable class which manage attributes
+    """ A simple inheritable class which manages attributes
         visibility and interactivity
 
             lock():
@@ -22,11 +23,6 @@ class manage:
             unhide():
                 Makes the attribute visible again.
     """
-
-    __locked__ = {}
-    __hidden__ = {}
-    __dict__ = {"__locked__":{}, "__hidden__": {}}
-
 
     def __getattribute__(self, name):
         """ Returns the value of an attribute while preventing
@@ -59,7 +55,7 @@ class manage:
             raises an error if the value of a locked attribute
             is attempted to be changed
         """
-        print(name, value)
+
         if name == "__locked__":
             for attr in self.__locked__:
                 if attr not in value:
@@ -100,3 +96,6 @@ class manage:
             hidden.pop(name)
         else:
             raise AttributeError(f"'{name}' is not hidden")
+
+    __locked__ = {}
+    __hidden__ = {}
